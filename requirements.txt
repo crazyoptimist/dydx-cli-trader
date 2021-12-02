@@ -1,0 +1,5 @@
+dydx-v3-python
+python-dotenv
+pandas
+numpy
+schedule
