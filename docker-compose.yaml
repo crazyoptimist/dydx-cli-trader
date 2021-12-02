@@ -1,8 +1,11 @@
 version: "3"
 services:
   dydx_bot:
-    container_name: sniper
+    container_name: manual_trader
     build: .
+    volumes:
+      - "./:/app/"
     environment:
       - PYTHONUNBUFFERED=1
+    tty: true
     restart: always
