@@ -1,30 +1,41 @@
-# dYdX Sniper Bot
+# dYdX Trader CLI
 
-## Prepare env variables
+This is a CLI application that enables you trading on dYdX without leaving your terminal.
+
+I don't have time to maintain this repo actively, but you can do anything by forking it.
+
+## Prepare ENV Variables
+
+```bash
+cp .env.example .env
+```
 
 ```bash
 INFURA_PROJECT_ID=
 ETH_ADDRESS=
-# get stark key pair and api credentials from localStorage when you login the to dashboard
+# get stark key pair and api credentials from browser's localStorage after you login the to dashboard
 STARK_PRIVATE_KEY=
 API_KEY=
 API_PASSPHRASE=
 API_SECRET=
-# pass the eth address to the get_account request, you will get the positionId back
+# pass the eth address to the get_account request, and you will get the positionId
 POSITION_ID=
 ```
 
-## Install deps
+## Install Dependencies
+
 ```bash
 make install
 ```
 
-## Run it
+## Run It
+
 ```bash
 make run
 ```
 
-## Available requests on dYdX
+## Available Requests on dYdX
+
 ```python
 markets_response = client.public.get_markets()
 pprint(markets_response.data['markets'][MARKET_ADA_USD])
@@ -57,6 +68,7 @@ pprint(positions_response.data)
 ```
 
 ## LICENSE
-Top secret! LOL
 
-Created by [CrazyOptimist](https://github.com/crazyopimist)
+MIT
+
+Made with :heart: [crazyoptimist](https://github.com/crazyopimist)
